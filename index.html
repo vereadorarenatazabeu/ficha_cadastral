@@ -176,11 +176,11 @@
     }
 
     function validarFormulario(dados){
-      if(!dados.nome||!dados.dataNascimento||!dados.telefone||!dados.cep||
-        !dados.endereco||!dados.bairro||!dados.numero||!dados.interesses){
-        alert('Preencha todos os campos obrigatórios!');
-        return false;
-      }
+      if(!dados.nome||!dados.dataNascimento||!dados.telefone||!dados.cep||
+        !dados.endereco||!dados.bairro||!dados.numero){ // <- O campo 'interesses' foi removido daqui, tornando-o opcional.
+        alert('Preencha todos os campos obrigatórios!');
+        return false;
+      }
       if(dados.cep.replace(/\D/g,'').length!==8){
         alert('CEP inválido!');
         return false;
